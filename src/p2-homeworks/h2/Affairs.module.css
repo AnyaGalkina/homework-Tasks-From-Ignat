@@ -1,3 +1,13 @@
-.someClass {
+.priority {
+    color: #1f306e;
+    padding: 5px;
+}
 
+.highPriority {
+    color: #c7417b;
+    padding: 5px;
+}
+
+.button {
+    padding: 5px;
 }
