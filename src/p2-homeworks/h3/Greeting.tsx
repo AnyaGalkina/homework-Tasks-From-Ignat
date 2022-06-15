@@ -1,26 +1,36 @@
-import React from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
+    addUser: () => void
+    error: string
+    totalUsers: number
+    onKeyDown: (e: KeyboardEvent<HTMLInputElement>) => void
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
+    {name, setNameCallback, addUser, error, totalUsers, onKeyDown} // деструктуризация пропсов
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    const inputClass = name === "" ? s.error : s.noError
+    const isDisabled = name === "" && true
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.wrapperClass}>
+            <input value={name} onChange={setNameCallback} className={inputClass} onKeyDown={onKeyDown}/>
+
+            <button onClick={addUser}
+                    disabled={isDisabled}
+                    className={s.button}
+            >add
+            </button>
+            <span>{"Total users " + totalUsers}</span>
+            <div>
+                <span className={inputClass}>{error}</span>
+            </div>
+
         </div>
     )
 }

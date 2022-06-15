@@ -1,7 +1,16 @@
-.someClass {
+.wrapperClass {
+    margin-left: 20px;
+}
+
+.noError {
+    color: black;
 
 }
 
 .error {
-    border: 1px solid red;
+    color: red;
+}
+
+.button {
+    margin: 0px 5px;
 }

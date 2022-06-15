@@ -1,7 +1,17 @@
-.default {
-
+.default:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
 }
 
 .red {
-    background: red;
+    background: pink;
+}
+
+.red:hover {
+    background-color: #FF1493;
+    color: white;
+}
+
+.disabled:hover {
+    color: gray;
 }
