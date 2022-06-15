@@ -23,19 +23,19 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             setName('')
         } else {
             setName(e.currentTarget.value)
-            setError('')
+            error && setError('')
         }
     }
 
     const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-        e.key === "Enter" && addUser()
+        name && e.key === "Enter" && addUser()
     }
 
     const addUser = () => {
         addUserCallback(name)
         alert(`Hello ${name}!`)
         setName('')
-        setError('')
+        error && setError('')
     }
 
     const totalUsers = users.length
