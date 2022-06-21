@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/homework-react-small-tasks/static/css/main.55c2c03e.css",
+    "main.js": "/homework-react-small-tasks/static/js/main.adfa3b6f.js",
+    "static/media/404-error-with-portals-concept-illustration.webp": "/homework-react-small-tasks/static/media/404-error-with-portals-concept-illustration.2a806cab7365aea998ac.webp",
+    "index.html": "/homework-react-small-tasks/index.html",
+    "main.55c2c03e.css.map": "/homework-react-small-tasks/static/css/main.55c2c03e.css.map",
+    "main.adfa3b6f.js.map": "/homework-react-small-tasks/static/js/main.adfa3b6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55c2c03e.css",
+    "static/js/main.adfa3b6f.js"
+  ]
+}
