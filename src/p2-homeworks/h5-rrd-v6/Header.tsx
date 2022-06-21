@@ -1,15 +1,29 @@
-import React from 'react'
-import {NavLink} from "react-router-dom";
-import {PATH} from "./Pages";
+import React, {useState} from 'react'
+import {NavLink} from "react-router-dom"
+import {PATH} from "./Pages"
+import styles from "./Header.module.css"
+
+
 
 function Header() {
+    const [collapsed, setCollapsed] = useState(true)
+
     return (
-        <div>
-            // add NavLinks
-            {/*<h2 onMouseOver={() => {}}>Navigation</h2>*/}
-            <NavLink to={PATH.PRE_JUNIOR} />
-            <NavLink to={PATH.JUNIOR} />
-            <NavLink to={PATH.JUNIORPLUS} />
+        <div className={styles.nav}
+             // onMouseOut={() => {setCollapsed(true)}}
+        >
+            <h2 className={styles.header}
+                onMouseOver={() => {setCollapsed(false)}}
+                // onBlur={() => {setCollapsed(true)}}
+            >Navigation 🔍</h2>
+
+            {!collapsed &&
+                <div>
+                        <NavLink className={styles.link} to={PATH.PRE_JUNIOR}>PRE-JUNIOR</NavLink>
+                        <NavLink className={styles.link} to={PATH.JUNIOR}>JUNIOR</NavLink>
+                        <NavLink className={styles.link} to={PATH.JUNIORPLUS}>JUNIOR-PLUSE</NavLink>
+                </div>
+            }
         </div>
     )
 }
