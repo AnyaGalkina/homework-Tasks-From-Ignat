@@ -1,13 +1,29 @@
 .nav {
-    width: 400px;
+    width: 800px;
     height: 100px;
     background-color: #54b3d6;
     text-decoration: none;
     color: white;
+    display: inline-flex;
+
 }
 
+.links {
+    width: 400px;
+    height: 100px;
+    display: inline-flex;
+}
+
+.header {
+    width: 400px;
+    height: 100px;
+    display: inline-flex;
+    padding: 13px 0 0 13px;
+}
+
+
 .link {
-    padding-left: 13px;
+    margin: auto;
     color: #5b4b72;
     font-weight: bold;
     text-decoration: none;
@@ -17,6 +33,3 @@
     color: #b680a6;
 }
 
-.header {
-    padding: 13px 0 0 13px;
-}
