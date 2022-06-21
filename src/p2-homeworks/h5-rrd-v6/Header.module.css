@@ -1,0 +1,22 @@
+.nav {
+    width: 400px;
+    height: 100px;
+    background-color: #54b3d6;
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    padding-left: 13px;
+    color: #5b4b72;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #b680a6;
+}
+
+.header {
+    padding: 13px 0 0 13px;
+}
