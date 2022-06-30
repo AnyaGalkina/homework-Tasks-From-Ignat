@@ -19,8 +19,13 @@
     height: 100px;
     display: inline-flex;
     padding: 13px 0 0 13px;
+/*    transition-duration: 500ms;*/
+/*    transform: translate(-220px);*/
+/*}*/
+/*.header:hover {*/
+/*    transition-duration: 500ms;*/
+/*    transform: translate(0px);*/
 }
-
 
 .link {
     margin: auto;
@@ -33,3 +38,9 @@
     color: #b680a6;
 }
 
+.active{
+    color: #1f306e;
+    text-decoration: none;
+    font-weight: bold;
+    margin: auto;
+}

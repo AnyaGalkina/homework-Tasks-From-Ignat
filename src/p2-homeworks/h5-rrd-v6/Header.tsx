@@ -16,9 +16,9 @@ function Header() {
         >
             {!collapsed &&
                 <div className={styles.links}>
-                    <NavLink className={styles.link} to={PATH.PRE_JUNIOR}>PRE-JUNIOR</NavLink>
-                    <NavLink className={styles.link} to={PATH.JUNIOR}>JUNIOR</NavLink>
-                    <NavLink className={styles.link} to={PATH.JUNIORPLUS}>JUNIOR-PLUSE</NavLink>
+                    <NavLink className={({isActive}) => isActive ? styles.active : styles.link} to={PATH.PRE_JUNIOR}>PRE-JUNIOR</NavLink>
+                    <NavLink className={({isActive}) => isActive ? styles.active : styles.link}  to={PATH.JUNIOR}>JUNIOR</NavLink>
+                    <NavLink className={({isActive}) => isActive ? styles.active : styles.link}  to={PATH.JUNIORPLUS}>JUNIOR-PLUSE</NavLink>
                 </div>
             }
            <div className={styles.header}>
