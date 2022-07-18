@@ -1,7 +1,28 @@
-.default:hover {
-    box-shadow: inset 100px 0 0 0 #54b3d6;
-    color: white;
+@keyframes blink {
+    0% {
+        left: -130%
+    }
+    100% {
+        left: 130%
+    }
 }
+
+/*.default:hover {*/
+/*    !*transform: skew(45deg);*!*/
+/*    !*box-shadow: inset 100px 0 0 0 #54b3d6;*!*/
+/*    !*color: white;*!*/
+/*}*/
+
+.default:hover::after {
+    animation: blink 0.35s ease;
+    /*transform: skew(45deg);*/
+}
+
+.default:focus {
+    outline: #54b3d6 solid 1px;
+    /*transform: skew(45deg);*/
+}
+
 
 .red {
     background: pink;
