@@ -1,0 +1,29 @@
+.main {
+    margin: 10px;
+}
+
+.clock {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #5415c7;
+    width: 100px;
+    cursor: pointer;
+}
+
+.date {
+    font-weight: bold;
+    margin: 5px;
+    /*height: 20px;*/
+    cursor: pointer;
+}
+
+.button {
+    background-color: bisque;
+}
+.button:hover {
+    background-color: #e7a44d;
+
+}
+
