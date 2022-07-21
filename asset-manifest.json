@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/homework-react-small-tasks/static/css/main.3d6c9ec6.css",
-    "main.js": "/homework-react-small-tasks/static/js/main.fbf375a5.js",
+    "main.css": "/homework-react-small-tasks/static/css/main.6ef47174.css",
+    "main.js": "/homework-react-small-tasks/static/js/main.249a8905.js",
     "static/media/404-error-with-portals-concept-illustration.webp": "/homework-react-small-tasks/static/media/404-error-with-portals-concept-illustration.2a806cab7365aea998ac.webp",
     "index.html": "/homework-react-small-tasks/index.html",
-    "main.3d6c9ec6.css.map": "/homework-react-small-tasks/static/css/main.3d6c9ec6.css.map",
-    "main.fbf375a5.js.map": "/homework-react-small-tasks/static/js/main.fbf375a5.js.map"
+    "main.6ef47174.css.map": "/homework-react-small-tasks/static/css/main.6ef47174.css.map",
+    "main.249a8905.js.map": "/homework-react-small-tasks/static/js/main.249a8905.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d6c9ec6.css",
-    "static/js/main.fbf375a5.js"
+    "static/css/main.6ef47174.css",
+    "static/js/main.249a8905.js"
   ]
 }
