@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {homeWorkReducer} from "./bll/homeWorkReducer"
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton"
+import style from "./HW8.module.css"
 
 export type UserType = {
     _id: number
@@ -35,16 +36,17 @@ function HW8() {
         <div>
             <hr/>
             homeworks 8
+            <div className={style.mainDiv}>
+                {finalPeople}
 
-            {/*should work (должно работать)*/}
-            {finalPeople}
+                <div>
+                    <SuperButton onClick={sortUp}>sort up</SuperButton>
+                    <SuperButton onClick={sortDown}>sort down</SuperButton>
+                    <SuperButton onClick={filterByAge}> check 18</SuperButton>
+                </div>
 
-            <div>
-                <SuperButton onClick={sortUp}>sort up</SuperButton>
-                <SuperButton onClick={sortDown}>sort down</SuperButton>
-                <SuperButton onClick={filterByAge}> check 18</SuperButton>
+
             </div>
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
