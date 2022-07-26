@@ -1,14 +1,27 @@
-const initState = {
-
+const SET_TOGGLE_IS_LOADING = "SET_TOGGLE_IS_LOADING";
+export type LoadingStateType = {
+    isLoading: boolean
 }
 
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+const initState = {
+    isLoading: false
+}
+
+export const loadingReducer = (state = initState, action: HW10ActionType): LoadingStateType => {
     switch (action.type) {
-        case '': {
-            return state
+        case SET_TOGGLE_IS_LOADING: {
+            return {...state, isLoading: action.isLoading}
         }
-        default: return state
+        default:
+            return state
     }
 }
 
-export const loadingAC = (): any => {} // fix any
+type HW10ActionType = {
+    type: "SET_TOGGLE_IS_LOADING"
+    isLoading: boolean
+}
+
+export const loadingAC = (isLoading: boolean): HW10ActionType => {
+    return {type: SET_TOGGLE_IS_LOADING, isLoading}
+}
