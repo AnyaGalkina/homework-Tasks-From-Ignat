@@ -1,6 +1,6 @@
 import React from 'react'
 import {AffairType} from "./HW2";
-import styles from './Affairs.module.css';
+import styles from "./Afair.module.css"
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -16,12 +16,14 @@ function Affair(props: AffairPropsType) {
     let priorityStyle= props.affair.priority === 'high' ? styles.highPriority : styles.priority;
 
     return (
-        <div>
-            <b><span>// show some text</span></b>
-            <em><span
-                className={priorityStyle}
-            > {props.affair.priority}</span></em>
-            <button className={styles.button} onClick={deleteCallback}>X</button>
+        <div className={styles.afair }>
+            <b><span>{props.affair.name}</span></b>
+            <div>
+                <em><span
+                    className={priorityStyle}
+                > {props.affair.priority}</span></em>
+                <button className={styles.button} onClick={deleteCallback}>X</button>
+            </div>
         </div>
     )
 }

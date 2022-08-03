@@ -1,6 +1,6 @@
 .span {
     display: inline-block;
     cursor: pointer;
-    height: 40px;
-    padding-top: 10px;
+    /*height: 40px;*/
+    padding: 10px 0;
 }
