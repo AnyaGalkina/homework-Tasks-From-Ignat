@@ -1,0 +1,15 @@
+.priority {
+    color: #1f306e;
+    padding: 5px;
+}
+
+.highPriority {
+    color: #c7417b;
+    padding: 5px;
+}
+
+.afair {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}

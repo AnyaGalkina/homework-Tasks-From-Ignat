@@ -36,7 +36,7 @@ function Affairs(props: AffairsPropsType) {
     }
 
     return (
-        <div>
+        <div className={styles.afairsBlock}>
             {mappedAffairs}
 
             <button onClick={setAll}  className={setClassName('all')}>All</button>

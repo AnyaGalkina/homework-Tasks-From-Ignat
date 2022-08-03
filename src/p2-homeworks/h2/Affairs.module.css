@@ -1,18 +1,13 @@
-.priority {
-    color: #1f306e;
-    padding: 5px;
-}
-
-.highPriority {
-    color: #c7417b;
-    padding: 5px;
-}
-
 .button {
     padding: 5px;
 }
 
-.active{
+.active {
     box-shadow: inset 100px 0 0 0 #54b3d6;
     color: white;
+}
+
+.afairsBlock {
+    padding: 15px;
+    width: 250px;
 }
