@@ -6,37 +6,33 @@ import styles from "./Request.module.css";
 
 const Request = () => {
 
-    const [{resText, resDetails, error}, setState] = useState({resText: "", resDetails: "", error: false})
-    // const [resText, setResText] = useState("");
-    // const [resDetails, setResDetails] = useState("");
-    // const [error, setError] = useState(false);
+    const [resText, setResText] = useState("");
+    const [resDetails, setResDetails] = useState("");
+    const [error, setError] = useState(false);
     const [checkedStatus, setCheckedStatus] = useState(false);
 
+    const updateData = (text: string, details: string, error: boolean) => {
+        setResText(text);
+        setResDetails(details);
+        setError(error);
+    }
 
     const onButtonClickHandler = () => {
         RequestsAPI.createRequest(checkedStatus)
             .then((res) => {
-                console.log(res.data.errorText);
-                setState({resText: res.data.errorText, resDetails: res.data.info, error: false})
-                // setResText(res.data.errorText);
-                // setResDetails(res.data.info);
-                // setError(false);
+                let {errorText, info} = res.data;
+                console.log(errorText);
+                updateData(errorText, info, false);
             })
             .catch((error) => {
-                console.log(error.response ? error.response.data.errorText : error.message);
-                setState({
-                    resText: error.response.data.errorText,
-                    resDetails: error.response.data.info,
-                    error: true
-                })
-                // setResText(error.response.data.errorText);
-                // setResDetails(error.response.data.info);
-                // setError(true);
+                let {errorText, info} = error.response.data;
+                console.log(error.response ? errorText : error.message);
+                updateData(errorText, info, true);
             })
     };
 
     const onCheckboxChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setCheckedStatus(e.currentTarget.checked)
+        setCheckedStatus(e.currentTarget.checked);
     }
 
     return (
