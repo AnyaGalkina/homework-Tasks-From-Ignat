@@ -3,14 +3,15 @@ import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 type ButtonPropsType = DefaultButtonPropsType & {
-    onClick: () => void
+    onClick: () => void;
+    isFetching: boolean
 }
 
-const Button = ({onClick, className, ...restProps}: ButtonPropsType) => {
+const Button = ({onClick, className, isFetching,  ...restProps}: ButtonPropsType) => {
 
     return (
         <div>
-            <button onClick={onClick} {...restProps}>Post request</button>
+            <button onClick={onClick} {...restProps} disabled={isFetching}>Post request</button>
         </div>
     );
 };

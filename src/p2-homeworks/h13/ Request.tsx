@@ -10,24 +10,27 @@ const Request = () => {
     const [resDetails, setResDetails] = useState("");
     const [error, setError] = useState(false);
     const [checkedStatus, setCheckedStatus] = useState(false);
+    const [isFetching, setIsFetching] = useState(false);
 
-    const updateData = (text: string, details: string, error: boolean) => {
+    const updateData = (text: string, details: string, error: boolean, isFetching: boolean) => {
         setResText(text);
         setResDetails(details);
         setError(error);
+        setIsFetching(isFetching);
     }
 
     const onButtonClickHandler = () => {
+        setIsFetching(true);
         RequestsAPI.createRequest(checkedStatus)
             .then((res) => {
                 let {errorText, info} = res.data;
                 console.log(errorText);
-                updateData(errorText, info, false);
+                updateData(errorText, info, false, false);
             })
             .catch((error) => {
                 let {errorText, info} = error.response.data;
                 console.log(error.response ? errorText : error.message);
-                updateData(errorText, info, true);
+                updateData(errorText, info, true, false);
             })
     };
 
@@ -37,7 +40,7 @@ const Request = () => {
 
     return (
         <div className={styles.main}>
-            <Button onClick={onButtonClickHandler}/>
+            <Button onClick={onButtonClickHandler} isFetching={isFetching}/>
             <Checkbox onChange={onCheckboxChangeHandler}/>
             <div className={`${error && styles.error}`}>
                 <h4 className={styles.h}>{resText}</h4>
