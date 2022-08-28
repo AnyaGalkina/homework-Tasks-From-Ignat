@@ -21,3 +21,31 @@
 .some-text {
     color: darkslateblue;
 }
+
+.crazy {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), teal), linear-gradient(to right, rgba(255, 0, 100, .3), rgba(255, 100, 127, .2)), linear-gradient(to top right, yellow, rgba(0, 0, 0, 0)), radial-gradient(closest-corner at 20% 80%, yellow, red);
+    background-attachment: fixed;
+}
+
+.candy {
+    /*background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B); !* Chrome 10-25, Safari 5.1-6 *!*/
+    background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.crazy-text {
+    color: #5b4b72;
+}
+
+.candy-text {
+    color: gray;
+}
+
+.default {
+    background-color: #3cb5f2;
+    border-color: #3cb5f2;
+}
+
+.default-text {
+    color: white;
+}
