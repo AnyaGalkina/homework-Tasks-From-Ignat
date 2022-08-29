@@ -10,10 +10,10 @@ const themes = ["dark", "red", "some", "crazy", "candy", "default"];
 function HW12() {
     const theme = useSelector<AppStoreType, string>(state => state.theme.theme)
 
-     const dispatch = useDispatch();
-     const onChangeCallback = (theme: string) => {
-         dispatch(changeTheme(theme));
-     }
+    const dispatch = useDispatch();
+    const onChangeCallback = (theme: string) => {
+        dispatch(changeTheme(theme));
+    }
 
     return (
         <div className={s[theme]}>
@@ -23,7 +23,8 @@ function HW12() {
             </span>
             <div>
                 <SuperRadio options={themes}
-                    onChangeOption={onChangeCallback}
+                            onChangeOption={onChangeCallback}
+                            value={theme}
                 />
             </div>
             <hr/>

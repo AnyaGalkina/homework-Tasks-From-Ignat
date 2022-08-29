@@ -7,7 +7,7 @@ import styles from "./HW11.module.css";
 
 function HW11() {
     const [step, setStep] = useState(10)
-    const [min, setMin] = useState(0);
+    const [min, setMin] = useState(0)
     const [max, setMax] = useState(100)
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
@@ -29,8 +29,10 @@ function HW11() {
             homeworks 11
             <div className={styles.div}>
                 <span>Choose step</span>
-                <SuperRadio options={stepOptions}
-                            onChangeOption={onChangeStepHandler}
+                <SuperRadio
+                    options={stepOptions}
+                    onChangeOption={onChangeStepHandler}
+                    value={+step}
                 />
             </div>
             <div className={styles.div}>
